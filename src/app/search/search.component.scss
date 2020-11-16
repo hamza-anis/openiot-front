@@ -1,0 +1,27 @@
+.search {
+  display: flex;
+  margin: auto;
+  background-color: lightcoral;
+  .searchform {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+  }
+  .addbtn {
+    margin: auto;
+  }
+}
+.tags {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  background-color: lightcoral;
+  padding: 10px;
+  
+}
+.sendbtn {
+  float: right;
+  margin: 10px;
+  background-color: lightcoral;
+}

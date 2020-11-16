@@ -1,0 +1,36 @@
+<div class="search">
+  <mat-form-field class="searchform">
+    <input #search matInput placeholder="Type tag(s)" />
+  </mat-form-field>
+  <button
+    mat-mini-fab
+    color="primary"
+    (click)="addTag(search.value)"
+    class="addbtn"
+    aria-label="Add tag"
+  >
+    Add
+  </button>
+</div>
+<div class="tags" color="primary">
+  <!-- <div *ngFor="let tag of tagList" class="items"> <button mat-mini-fab color="accent" (click)="removeTag(tag)">X</button> {{ tag }}</div> -->
+  <mat-chip-list>
+    <mat-chip
+      (click)="removeTag(tag)"
+      *ngFor="let tag of tagList"
+      class="items"
+    >
+      {{ tag }}
+    </mat-chip>
+  </mat-chip-list>
+ 
+</div>
+<div class="sendbtn">
+  <button (click)="showGraphs()" mat-raised-button color="primary">
+    Visualize
+  </button>
+</div>
+  
+
+
+<app-graphs *ngIf="showgraph" [tagList]="tagList"></app-graphs>
